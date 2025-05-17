@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Academia de Danza - Contacto</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+  }
+  header, footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  nav {
+    background-color: #e0f2f1;
+    padding: 10px 0;
+    text-align: center;
+  }
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  main {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+  h2 {
+    color: #4CAF50;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  textarea {
+    resize: vertical;
+  }
+  button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  #mensajeEnviado {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    display: none;
+  }
+</style>
+<script>
+  function enviarFormulario(e) {
+    e.preventDefault();
+    document.getElementById("contactoForm").reset();
+    document.getElementById("mensajeEnviado").style.display = "block";
+  }
+</script>
+</head>
+<body>
+
+<header>
+  <h1><strong><em>Academia de Danza Venados 11</em></strong></h1>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="clases.html">Clases</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+<main>
+
+  <h2><strong><em>Contacto</em></strong></h2>
+  <form id="contactoForm" onsubmit="enviarFormulario(event)">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo..." />
+
+    <label for="telefono">Teléfono para contactarte:</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Ejemplo: 656 234 5678" />
+
+    <label for="mensaje">¿En que estilo de baile estas interesad@?:</label>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Puedes escribir mas de uno."></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="mensajeEnviado">¡Gracias por enviar tu mensaje! Te contactaremos pronto.</div>
+
+</main>
+
+<footer>
+  <p>Academia de Danza Venados 11· ¡Muévete con estilo! </p>
+</footer>
+
+</body>
+</html>
